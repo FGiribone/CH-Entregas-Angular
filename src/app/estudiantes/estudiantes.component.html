@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <li *ngFor="let estudiante of estudiantes" class="list-group-item">
+      <p >{{ estudiante.nombre }}</p>
+      <p [ngStyle]="{'color': getColor(estudiante.estado)}">{{ estudiante.estado | uppercase }}</p>
+    </li>
+  </ul>
