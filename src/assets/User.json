@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "prueba 1",
+      "userLastName": "string",
+      "userEmail": "string",
+      "userCity": "string",
+      "userProvince": "string",
+      "userAddress": "string",
+      "userCurso": "curso 1",
+      "inputZip": "string",
+      "userPassword": "string",
+      "role": "ADMIN",
+      "createdAt": "2022-05-17T10:00:00.000Z",
+      "actions": []
+    },
+    {
+      "id": 2,
+      "userName": "prueba 2",
+      "userLastName": "string",
+      "userEmail": "string",
+      "userCity": "string",
+      "userProvince": "string",
+      "userAddress": "string",
+      "userCurso": "curso 2",
+      "inputZip": "string",
+      "userPassword": "string",
+      "role": "ADMIN",
+      "createdAt": "2022-05-17T10:00:00.000Z",
+      "actions": []
+    }
+  ]
+}

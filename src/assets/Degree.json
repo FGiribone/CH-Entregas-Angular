@@ -1,0 +1,20 @@
+{
+  "degrees": [
+    {
+      "id": "1",
+      "nombre": "Ingeniería en Informática"
+    },
+    {
+      "id": "2",
+      "nombre": "Licenciatura en Administración"
+    },
+    {
+      "id": "3",
+      "nombre": "Licenciatura en Psicología"
+    },
+    {
+      "id": "4",
+      "nombre": "Ciencias de la Comunicación"
+    }
+  ]
+}

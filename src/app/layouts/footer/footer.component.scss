@@ -1,0 +1,23 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background: #D9AFA5;
+    padding: 20px;
+    color: #000; 
+  }
+  
+  .footer-container div {
+    width: 25%;
+  }
+  
+  .contacto, .actividades, .ayuda {
+    text-align: right;
+  }
+  
+  .footer-container p {
+    margin: 5px 0;
+  }
+  
+  .footer-container h4 {
+    margin-bottom: 10px;
+  }

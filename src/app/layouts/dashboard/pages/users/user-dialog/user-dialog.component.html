@@ -1,0 +1,32 @@
+<p>user-dialog works!</p>
+<h2>Editar Usuario</h2>
+
+
+
+<form (ngSubmit)="saveChanges()" #userForm="ngForm" class="user-form">
+  <div>
+    <label>Nombre:</label>
+    <input type="text" name="userName" [(ngModel)]="user.userName" required>
+  </div>
+  <div>
+    <label>Apellido:</label>
+    <input type="text" name="userLastName" [(ngModel)]="user.userLastName" required>
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="text" name="userEmail" [(ngModel)]="user.userEmail" required>
+  </div>
+  <div>
+    <label>Ciudad:</label>
+    <input type="text" name="userCity" [(ngModel)]="user.userCity" required>
+  </div>
+  <div>
+    <label>Provincia:</label>
+    <input type="text" name="userProvince" [(ngModel)]="user.userProvince" required>
+  </div>
+  <div>
+    <label>Dirección:</label>
+    <input type="text" name="userAddress" [(ngModel)]="user.userAddress" required>
+  </div>
+  <button type="submit">Guardar cambios</button>
+</form>

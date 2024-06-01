@@ -1,0 +1,19 @@
+.about-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}/*# sourceMappingURL=about.component.css.map */

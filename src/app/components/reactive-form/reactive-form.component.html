@@ -1,0 +1,118 @@
+<body>
+  <section class="form-register">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="row g-3">
+      <div class="col-12">
+        <label for="inputName" class="form-label">Nombre</label>
+        <input formControlName="userName" type="text" class="form-control" id="inputName"
+          placeholder="Ingrese su nombre" required>
+        <div
+          *ngIf="userForm.get('userName')?.invalid && (userForm.get('userName')?.dirty || userForm.get('userName')?.touched)">
+          <span class="text-danger" *ngIf="userForm.get('userName')?.errors?.['required']">Obligatorio</span>
+          <span class="text-danger" *ngIf="userForm.get('userName')?.errors?.['pattern']">Solo letras</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+      <label for="userCarrera">Carrera </label>
+      <select formControlName="userCarrera" (change)="onCarreraSelect($event)" class="form-control">
+        <option value="" disabled selected> Seleccione una carrera</option>
+        <option *ngFor="let carrera of carreras" [value]="carrera.id">{{ carrera.nombre }}</option>
+      </select>
+      <div *ngIf="userForm.get('userCarrera')?.invalid && userForm.get('userCarrera')?.touched" class="text-danger">
+        Por favor seleccione una carrera.
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="userCurso">Curso</label>
+        <select formControlName="userCurso" id="userCurso" class="form-control">
+          <option value="" disabled selected>Seleccione un curso</option>
+          <option *ngFor="let curso of cursos" [value]="curso.id">{{ curso.nombre }}</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label for="inputLastName" class="form-label">Apellido</label>
+        <input formControlName="userLastName" type="text" class="form-control" id="inputLastName"
+          placeholder="Ingrese su Apellido" required>
+        <div
+          *ngIf="userForm.get('userLastName')?.invalid && (userForm.get('userLastName')?.dirty || userForm.get('userLastName')?.touched)">
+          <span class="text-danger">Obligatorio </span>
+          <span class="text-danger" *ngIf="userForm.get('userLastName')?.errors?.['pattern']">Solo letras, espacios,
+            apóstrofos y guiones medios permitidos</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input formControlName="userEmail" type="email" class="form-control" id="inputEmail4"
+          placeholder="Ingrese su email">
+        <div
+          *ngIf="userForm.get('userEmail')?.invalid && (userForm.get('userEmail')?.dirty || userForm.get('userEmail')?.touched)">
+          <span class="text-danger">Obligatorio</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Ciudad</label>
+        <input formControlName="userCity" type="text" class="form-control" id="inputCity">
+        <div
+          *ngIf="userForm.get('userCity')?.invalid && (userForm.get('userCity')?.dirty || userForm.get('userCity')?.touched)">
+          <span class="text-danger">Obligatorio</span>
+          <span class="text-danger" *ngIf="userForm.get('userCity')?.errors?.['pattern']">Solo letras</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="userProvince">Provincia</label>
+        <select formControlName="userProvince" id="userProvince" class="form-control">
+          <option value="" disabled selected>Seleccione la provincia</option>
+          <option *ngFor="let provincia of provincias" [value]="provincia">{{ provincia }}</option>
+        </select>
+        <div *ngIf="userForm.get('userProvince')?.invalid && userForm.get('userProvince')?.touched" class="text-danger">
+          Por favor selecciona una provincia.
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Dirección</label>
+        <input formControlName="userAddress" type="text" class="form-control" id="inputAddress"
+          placeholder="Ingrese su dirección">
+        <div
+          *ngIf="userForm.get('userAddress')?.invalid && (userForm.get('userAddress')?.dirty || userForm.get('userAddress')?.touched)">
+          <span class="text-danger">Obligatorio</span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Codigo postal</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input formControlName="userPassword" type="password" class="form-control" id="inputPassword4" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword5" class="form-label"> Confirm password</label>
+        <input formControlName="password2" type="password" class="form-control" id="inputPassword5" required>
+        <div
+          *ngIf="userForm.get('password2')?.hasError('passwordMismatch') && (userForm.get('password2')?.dirty || userForm.get('password2')?.touched)">
+          <span class="text-danger">Las contraseñas no coinciden</span>
+        </div>
+      </div>
+      <div *ngIf="userForm.invalid && userForm.touched" class="alert alert-danger col-12">
+        Por favor completa todos los campos correctamente.
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div *ngIf="mostrarExito" class="alert alert-success col-12">
+        Formulario válido, enviando datos...
+      </div>
+      <div class="col-12">
+        <button type="submit" class="SendButton" (click)="onSubmit()">Enviar</button>
+      </div>
+
+    </form>
+  </section>
+</body>

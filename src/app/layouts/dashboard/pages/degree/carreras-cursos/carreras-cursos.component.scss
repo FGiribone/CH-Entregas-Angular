@@ -1,0 +1,52 @@
+.carreras-cursos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carrera-section {
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.carrera-section h2 {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.cursos-header,
+.curso-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.curso-cell {
+  flex: 1;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.curso-cell:nth-child(1) {
+  flex: 2;
+}
+
+.curso-cell:nth-child(2) {
+  flex: 1;
+  text-align: center;
+}
+
+.curso-cell:nth-child(3) {
+  flex: 1;
+  text-align: right;
+}
+
+.deleteButton {
+  mat-icon {
+    vertical-align: middle;
+  }
+}

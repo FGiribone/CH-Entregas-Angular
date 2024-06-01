@@ -1,0 +1,33 @@
+.section-title {
+  color: rgb(118, 58, 115);
+}
+
+.update-section {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.event-item {
+  background-color: #f9f9f9;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.academic-schedule {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.academic-schedule th, .academic-schedule td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.academic-schedule th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.academic-schedule td {
+  text-align: left;
+}/*# sourceMappingURL=home.component.css.map */

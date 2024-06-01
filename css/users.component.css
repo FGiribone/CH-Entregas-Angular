@@ -1,0 +1,40 @@
+.editButton {
+  margin-top: 10px;
+  margin-right: 10px;
+  background: radial-gradient(circle, #3e25e0, #9e93ea);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.deleteButton {
+  margin-top: 10px;
+  background: radial-gradient(circle, #ee424e, #090717);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.createUser {
+  margin-top: 10px;
+  margin-right: 10px;
+  background: radial-gradient(circle, #3e25e0, #9e93ea);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}/*# sourceMappingURL=users.component.css.map */

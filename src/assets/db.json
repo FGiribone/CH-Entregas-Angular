@@ -1,0 +1,214 @@
+{
+  "degrees": [
+    {
+      "id": "1",
+      "nombre": "Ingeniería en Informática"
+    },
+    {
+      "id": "2",
+      "nombre": "Licenciatura en Administración"
+    },
+    {
+      "id": "3",
+      "nombre": "Licenciatura en Psicología"
+    },
+    {
+      "id": "4",
+      "nombre": "Ciencias de la Comunicación"
+    }
+  ],
+  "courses": [
+    {
+      "id": "101",
+      "nombre": "Programación I",
+      "carrera_id": 1
+    },
+    {
+      "id": "102",
+      "nombre": "Base de Datos",
+      "carrera_id": 1
+    },
+    {
+      "id": "103",
+      "nombre": "Redes de Computadoras",
+      "carrera_id": 1
+    },
+    {
+      "id": "201",
+      "nombre": "Contabilidad",
+      "carrera_id": 2
+    },
+    {
+      "id": "202",
+      "nombre": "Finanzas",
+      "carrera_id": 2
+    },
+    {
+      "id": "203",
+      "nombre": "Marketing",
+      "carrera_id": 2
+    },
+    {
+      "id": "301",
+      "nombre": "Introducción a la Psicología",
+      "carrera_id": 3
+    },
+    {
+      "id": "302",
+      "nombre": "Psicología Clínica",
+      "carrera_id": 3
+    },
+    {
+      "id": "303",
+      "nombre": "Psicología del Desarrollo",
+      "carrera_id": 3
+    },
+    {
+      "id": "401",
+      "nombre": "Principales corrientes del pensamiento contemporáneo (Cuatrimestral)",
+      "carrera_id": 4
+    },
+    {
+      "id": "402",
+      "nombre": "Metodología y Técnicas de la investigación social (Cuatrimestral)",
+      "carrera_id": 4
+    },
+    {
+      "id": "403",
+      "nombre": "Historia social general I (Cuatrimestral)",
+      "carrera_id": 4
+    },
+    {
+      "id": "404",
+      "nombre": "Antropología social y cultural (Cuatrimestral)",
+      "carrera_id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userName": "prueba 1",
+      "userLastName": "string",
+      "userEmail": "string",
+      "userCity": "string",
+      "userProvince": "string",
+      "userAddress": "string",
+      "userCurso": "curso 1",
+      "inputZip": "string",
+      "userPassword": "string",
+      "role": "ADMIN",
+      "createdAt": "2022-05-17T10:00:00.000Z",
+      "actions": []
+    },
+    {
+      "id": "2",
+      "userName": "prueba 2",
+      "userLastName": "string",
+      "userEmail": "string",
+      "userCity": "string",
+      "userProvince": "string",
+      "userAddress": "string",
+      "userCurso": "curso 2",
+      "inputZip": "string",
+      "userPassword": "string",
+      "role": "ADMIN",
+      "createdAt": "2022-05-17T10:00:00.000Z",
+      "actions": []
+    },
+    {
+      "id": "1bb5",
+      "userName": "Nombre del usuario",
+      "userLastName": "Apellido del usuario",
+      "userEmail": "correo@example.com",
+      "userCity": "Ciudad del usuario",
+      "userProvince": "Provincia del usuario",
+      "userAddress": "Dirección del usuario",
+      "userCurso": "Nombre del curso",
+      "inputZip": "Código postal",
+      "userPassword": "Contraseña del usuario",
+      "role": "Rol del usuario",
+      "createdAt": "Fecha de creación",
+      "actions": []
+    },
+    {
+      "id": "a80d",
+      "userCarrera": "1",
+      "userCurso": "Programación I",
+      "userName": "fabricio",
+      "userLastName": "giribone",
+      "userEmail": "a@a.com",
+      "userAddress": "direccion 12345",
+      "userProvince": "Buenos Aires",
+      "userCity": "CAPITAL FEDERAL",
+      "userPassword": "123456",
+      "password2": "123456",
+      "createdAt": "2024-05-11T16:10:09.960Z",
+      "role": "USER",
+      "actions": []
+    },
+    {
+      "id": "1c4e",
+      "userCarrera": "1",
+      "userCurso": "Programación I",
+      "userName": "fabricio",
+      "userLastName": "giribone",
+      "userEmail": "a@a.com",
+      "userAddress": "direccion 12345",
+      "userProvince": "Buenos Aires",
+      "userCity": "CAPITAL FEDERAL",
+      "userPassword": "123456",
+      "password2": "123456",
+      "createdAt": "2024-05-11T17:06:17.142Z",
+      "role": "USER",
+      "actions": []
+    },
+    {
+      "id": "7137",
+      "userCarrera": "1",
+      "userCurso": "Base de Datos",
+      "userName": "fabricio 2",
+      "userLastName": "giribone",
+      "userEmail": "a@a.com",
+      "userAddress": "direccion 12345",
+      "userProvince": "Buenos Aires",
+      "userCity": "CAPITAL FEDERAL",
+      "userPassword": "123456",
+      "password2": "123456",
+      "createdAt": "2024-05-11T17:20:37.167Z",
+      "role": "USER",
+      "actions": []
+    },
+    {
+      "id": "623f",
+      "userCarrera": "1",
+      "userCurso": "Programación I",
+      "userName": "fabricio",
+      "userLastName": "giribone",
+      "userEmail": "a@a.com",
+      "userAddress": "direccion 12345",
+      "userProvince": "Buenos Aires",
+      "userCity": "CAPITAL FEDERAL",
+      "userPassword": "123456",
+      "password2": "123456",
+      "createdAt": "2024-05-13T20:10:56.578Z",
+      "role": "USER",
+      "actions": []
+    },
+    {
+      "id": "7298",
+      "userCarrera": "4",
+      "userCurso": "Antropología social y cultural (Cuatrimestral)",
+      "userName": "prueba delete",
+      "userLastName": "giribone",
+      "userEmail": "a@a.com",
+      "userAddress": "prueba 12345",
+      "userProvince": "Buenos Aires",
+      "userCity": "CAPITAL FEDERAL",
+      "userPassword": "123456",
+      "password2": "123456",
+      "createdAt": "2024-06-01T15:53:57.100Z",
+      "role": "USER",
+      "actions": []
+    }
+  ]
+}

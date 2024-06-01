@@ -1,0 +1,11 @@
+
+<app-navbar></app-navbar>
+
+<app-toolbar *ngIf="loggedIn | async"></app-toolbar>
+
+
+<router-outlet></router-outlet>
+
+<footer>
+    <app-footer></app-footer>
+  </footer>

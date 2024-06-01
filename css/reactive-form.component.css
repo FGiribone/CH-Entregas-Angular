@@ -1,0 +1,41 @@
+body {
+  background-color: #624945;
+}
+
+.text-danger {
+  color: #dc3545;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.form-register {
+  width: 50%;
+  background: #D9AFA5;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: "calibri";
+  font-size: 22px;
+  color: #d8354d;
+  -webkit-box-shadow: 7px 13px 37px #000;
+          box-shadow: 7px 13px 37px #000;
+}
+
+.SendButton {
+  margin-top: 10px;
+  background: radial-gradient(circle, #D9AFA5, #9a716c);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}/*# sourceMappingURL=reactive-form.component.css.map */

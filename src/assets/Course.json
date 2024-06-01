@@ -1,0 +1,58 @@
+{
+  "courses": [
+    {
+      "carrera_id": 1,
+      "carrera_nombre": "Ingeniería en Informática",
+      "cursos": [
+        {
+          "id": 101,
+          "nombre": "Programación I"
+        },
+        {
+          "id": 102,
+          "nombre": "Base de Datos"
+        },
+        {
+          "id": 103,
+          "nombre": "Redes de Computadoras"
+        }
+      ]
+    },
+    {
+      "carrera_id": 2,
+      "carrera_nombre": "Licenciatura en Administración",
+      "cursos": [
+        {
+          "id": 201,
+          "nombre": "Contabilidad"
+        },
+        {
+          "id": 202,
+          "nombre": "Finanzas"
+        },
+        {
+          "id": 203,
+          "nombre": "Marketing"
+        }
+      ]
+    },
+    {
+      "carrera_id": 3,
+      "carrera_nombre": "Licenciatura en Psicología",
+      "cursos": [
+        {
+          "id": 301,
+          "nombre": "Introducción a la Psicología"
+        },
+        {
+          "id": 302,
+          "nombre": "Psicología Clínica"
+        },
+        {
+          "id": 303,
+          "nombre": "Psicología del Desarrollo"
+        }
+      ]
+    }
+  ]
+}

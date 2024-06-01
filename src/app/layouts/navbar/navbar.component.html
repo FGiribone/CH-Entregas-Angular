@@ -1,0 +1,33 @@
+<mat-toolbar class="mat-elevation-z8">
+  <div class="navbar">
+    <div class="left-section">
+      <div class="contact-info">
+        <span>
+          <a href="tel:0810-0000-0000">
+            <i class="material-icons">phone</i>
+            tel 0810-0000-0000
+          </a>
+        </span>
+        <span>
+          <a href="mailto:prueba&#64;prueba.edu.ar">
+            <i class="material-icons">email</i>
+            prueba&#64;prueba.edu.ar
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="right-section">
+      <ul class="topbar-actions">
+        <li *ngIf="loggedIn; else loginButton">
+          Bienvenido, {{ username }}
+          <button class="login-button" (click)="logout()">Cerrar Sesión</button>
+        </li>
+        <ng-template #loginButton>
+          <li>
+            <button class="login-button" (click)="openAuth()">Iniciar Sesión</button>
+          </li>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</mat-toolbar>
