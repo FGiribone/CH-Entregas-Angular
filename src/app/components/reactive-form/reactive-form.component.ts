@@ -22,6 +22,7 @@ export class ReactiveFormComponent implements OnInit{
   userForm: FormGroup;
   // variable para validar formulario
   mostrarExito: boolean = false; 
+  isSubmitting: boolean = false;
   
   provincias: string[] = [
    'Ciudad Autónoma de Buenos Aires',
@@ -60,29 +61,10 @@ export class ReactiveFormComponent implements OnInit{
     this.userForm = this.formBuilder.group({
       userCarrera: ['', Validators.required],
       userCurso: ['', Validators.required],
-      userName: 
-      ['', 
-      [
-      Validators.required,
-      Validators.pattern('^[a-zA-ZÁÉÍÓÚáéíóúñÑ]+$'),
-      ]],
-      userLastName: 
-      [
-        '',
-        [
-        Validators.required, 
-        Validators.pattern("^[a-zA-ZÁÉÍÓÚáéíóúñÑ' -]+$"),
-        ]
-      ],
-      userEmail: 
-      [
-        '', 
-        [Validators.required, 
-        Validators.email
-        ]
-      ],
-    userAddress: 
-      ['',Validators.required],
+      userName: ['', [Validators.required, Validators.pattern('^[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+$')]],
+      userLastName:['',[Validators.required,Validators.pattern("^[a-zA-ZÁÉÍÓÚáéíóúñÑ' -]+$"),]],
+      userEmail:['',[Validators.required,Validators.email]],
+      userAddress:['',Validators.required],
       userProvince: ['', Validators.required],
       userCity: ['', Validators.required],
       userPassword: ['', Validators.required],
@@ -132,35 +114,38 @@ export class ReactiveFormComponent implements OnInit{
   */
 
   // evito que se repitan los datos 
-  isSubmitting: boolean = false;
+
   onSubmit() {
+    if (this.userForm.invalid) {
+      this.userForm.markAllAsTouched();
+      return;
+    }
+
     if (!this.isSubmitting) {
       this.isSubmitting = true;
-      const formData = this.userForm.value as Iusuario;
-  
+
+      const formData = this.userForm.value;
+
       if (formData.userCurso) {
         const curso = this.cursos.find(curso => curso.id.toString() === formData.userCurso);
         if (curso) {
           formData.userCurso = curso.nombre;
         }
       }
-  
-  
+
       const currentDate = new Date();
       formData.createdAt = currentDate;
       formData.role = 'USER';
       formData.actions = [];
-  
-      //console.log('Datos desde formulario:', formData);
-  
+
       this.dataService.createUser(formData).subscribe(
         response => {
           console.log('Usuario creado exitosamente:', response);
-          this.dialogRef.close(); 
+          this.dialogRef.close();
         },
         error => {
           console.error('Error al crear usuario:', error);
-          this.isSubmitting = false; 
+          this.isSubmitting = false;
         }
       );
     }

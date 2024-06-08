@@ -7,6 +7,7 @@ export interface Iusuario {
   userCity: string;
   userProvince: string;
   userAddress: string;
+  userCarrera: string;
   userCurso: string;
   inputZip: string;
   userPassword: string;

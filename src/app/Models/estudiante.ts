@@ -8,6 +8,7 @@ export class Estudiante implements Iusuario {
     userCity: string;
     userProvince: string;
     userAddress: string;
+    userCarrera: string;
     userCurso: string;
     inputZip: string;
     userPassword: string;
@@ -23,6 +24,7 @@ export class Estudiante implements Iusuario {
         userCity: string,
         userProvince: string,
         userAddress: string,
+        userCarrera: string,
         userCurso: string,
         inputZip: string,
         userPassword: string,
@@ -36,6 +38,7 @@ export class Estudiante implements Iusuario {
         this.userCity = userCity;
         this.userProvince = userProvince;
         this.userAddress = userAddress;
+        this.userCarrera = userCarrera;
         this.userCurso = userCurso;
         this.inputZip = inputZip;
         this.userPassword = userPassword;

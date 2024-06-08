@@ -4,16 +4,23 @@ import { DegreeRoutingModule } from './degree-routing.module';
 import { CarrerasCursosComponent } from './carreras-cursos/carreras-cursos.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { EditarCarreraCursoComponent } from './carreras-cursos/editar-carrera-cursos/editar-carrera-cursos.component';
+import { MatDialogModule } from '@angular/material/dialog'; 
+import { FormsModule } from '@angular/forms'; 
+
 
 @NgModule({
   declarations: [
-    CarrerasCursosComponent
+    CarrerasCursosComponent,
+    EditarCarreraCursoComponent
   ],
   imports: [
     CommonModule,
     DegreeRoutingModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule, 
+    FormsModule 
   ]
 })
 export class DegreeModule { }

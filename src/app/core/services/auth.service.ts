@@ -1,8 +1,10 @@
+
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Iusuario } from '../../Models/usuario.models';
 import { LoginData } from '../../layouts/auth/Models/index';
 import { Router } from '@angular/router';
+
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private MOCK_AUTH_USER: Iusuario = {
@@ -15,6 +17,7 @@ export class AuthService {
     userProvince: 'cualquiera',
     userAddress: 'cualquiera',
     userCurso: 'todos',
+    userCarrera: 'todas',
     inputZip: '1111',
     userPassword: 'admin1',
     role: 'ADMIN',
@@ -24,48 +27,27 @@ export class AuthService {
   private _authUser$ = new BehaviorSubject<Iusuario | null>(null);
   public authUser$ = this._authUser$.asObservable();
 
-  constructor(private router: Router,
-  ) {}
+  constructor(private router: Router) {}
 
   login(data: LoginData): void {
-    if (data.email !== 'user@mail.com' || data.password !== '123456') {
-      alert('Correo o password incorrectos');
-    } else {
+    if (data.email === 'user@mail.com' && data.password === '123456') {
       this._authUser$.next(this.MOCK_AUTH_USER);
-      localStorage.setItem(
-        'accessToken',
-        'fdskfdsjkmngfunudsijfdsioufjsdoifdsyhfds'
-      );
+      localStorage.setItem('accessToken', 'valid-token');
       this.router.navigate(['home']);
+    } else {
+      alert('Correo o password incorrectos');
     }
   }
 
   verifyToken(): boolean {
     const token = localStorage.getItem('accessToken');
-    if (token) {
-      this._authUser$.next(this.MOCK_AUTH_USER);
-      return true;
-    } else {
-      return false;
-    }
-  }
-  
-  isLoggedIn(): boolean {
-    const token = localStorage.getItem('accessToken');
+    console.log('Token retrieved:', token);
     return !!token;
   }
 
-  isAdmin(): boolean {
-    const user = this._authUser$.value;
-    return user ? user.role === 'ADMIN' : false;
-  }
-
-  getCurrentAuthenticatedUser(): Iusuario | null {
-    return this._authUser$.value;
-  }
   logout(): void {
     this._authUser$.next(null);
     localStorage.removeItem('accessToken');
-    this.router.navigate(['login']);
+    this.router.navigate(['auth']);
   }
 }

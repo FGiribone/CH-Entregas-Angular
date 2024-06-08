@@ -1,16 +1,29 @@
 <div class="carreras-cursos-container">
   <div *ngFor="let carrera of carreras" class="carrera-section">
-    <h2>{{ carrera.nombre }}</h2>
+    <div class="carrera-header">
+      <h2>{{ carrera.nombre }}</h2>
+      <div class="carrera-actions">
+        <button class="editButton" mat-icon-button color="primary" (click)="editCarreraName(carrera)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+    </div>
     <div class="cursos-header">
       <div class="curso-cell">Curso</div>
       <div class="curso-cell">Inscriptos</div>
+      <div class="curso-cell">Capacidad</div>
       <div class="curso-cell">Acciones</div>
     </div>
     <div *ngFor="let curso of cursos[carrera.id]" class="curso-row">
       <div class="curso-cell">{{ curso.nombre }}</div>
       <div class="curso-cell">{{ countStudentsInCourse(curso.nombre) }}</div>
+      <div class="curso-cell">{{ curso.capacidad }}</div>
       <div class="curso-cell">
-        <button class="deleteButton" mat-icon-button color="warn" (click)="deleteCurso(curso, carrera.id)">          <mat-icon>delete</mat-icon>
+        <button class="editButton" mat-icon-button color="primary" (click)="editCurso(curso)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="deleteButton" mat-icon-button color="warn" (click)="deleteCurso(curso, carrera.id)">
+          <mat-icon>delete</mat-icon>
         </button>
       </div>
     </div>

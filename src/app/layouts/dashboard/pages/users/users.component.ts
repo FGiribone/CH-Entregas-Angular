@@ -50,14 +50,18 @@ export class UsersComponent implements OnInit {
   
     dialogRef.afterClosed().subscribe(updatedUser => {
       if (updatedUser) {
-        this.users = this.users.map(u => u.id === updatedUser.id ? updatedUser : u);
+        this.dataService.updateUser(updatedUser).subscribe(() => {
+          this.users = this.users.map(u => u.id === updatedUser.id ? updatedUser : u);
+        });
       }
     });
   }
   
   deleteUser(userId: number): void {
     if (confirm('¿Está seguro?')) {
-      this.users = this.users.filter(u => u.id !== userId);
+      this.dataService.deleteUser(userId).subscribe(() => {
+        this.users = this.users.filter(u => u.id !== userId);
+      });
     }
   }
 }

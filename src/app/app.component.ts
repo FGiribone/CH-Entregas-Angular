@@ -18,10 +18,14 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-   
+    this.userSubscription = this.loggedIn.subscribe(logged => {
+      console.log('User logged in state:', logged);
+    });
   }
 
   ngOnDestroy(): void {
-  
+    if (this.userSubscription) {
+      this.userSubscription.unsubscribe();
+    }
   }
 }

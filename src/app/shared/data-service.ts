@@ -50,6 +50,35 @@ export class DataService {
     );
   }
 
+  updateUser(user: Iusuario): Observable<Iusuario> {
+    const url = `${this.baseUrl}/users/${user.id}`;
+    return this.http.put<Iusuario>(url, user).pipe(
+      catchError(this.handleError<any>('updateUser'))
+    );
+  }
+
+  deleteUser(userId: number): Observable<any> {
+    const url = `${this.baseUrl}/users/${userId}`;
+    return this.http.delete(url).pipe(
+      catchError(this.handleError<any>('deleteUser'))
+    );
+  }
+
+  updateCarrera(carrera: Carrera): Observable<Carrera> {
+    const url = `${this.baseUrl}/degrees/${carrera.id}`;
+    return this.http.put<Carrera>(url, carrera).pipe(
+      catchError(this.handleError<any>('updateCarrera'))
+    );
+  }
+  
+  updateCurso(curso: Curso): Observable<Curso> {
+    const url = `${this.baseUrl}/courses/${curso.id}`;
+    return this.http.put<Curso>(url, curso).pipe(
+      catchError(this.handleError<any>('updateCurso'))
+    );
+  }
+
+
   deleteCurso(cursoId: number): Observable<any> {
     const url = `${this.baseUrl}/courses/${cursoId}`;
     return this.http.delete(url).pipe(

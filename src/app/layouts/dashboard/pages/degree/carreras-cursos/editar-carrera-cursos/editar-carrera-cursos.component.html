@@ -1,0 +1,15 @@
+<h2 *ngIf="isCarrera">Editar Carrera</h2>
+<h2 *ngIf="!isCarrera">Editar Curso</h2>
+
+<form (ngSubmit)="saveChanges()" #itemForm="ngForm" class="custom-form">
+  <div>
+    <label>Nombre:</label>
+    <input type="text" name="nombre" [(ngModel)]="item.nombre" required>
+  </div>
+  <div *ngIf="!isCarrera">
+    <label>Capacidad:</label>
+    <input type="number" name="capacidad" [(ngModel)]="capacidad" required>
+  </div>
+  <button type="submit">Guardar cambios</button>
+  <button type="button" (click)="cancel()">Cancelar</button>
+</form>

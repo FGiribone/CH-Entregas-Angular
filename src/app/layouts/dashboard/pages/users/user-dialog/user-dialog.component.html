@@ -1,7 +1,4 @@
-<p>user-dialog works!</p>
 <h2>Editar Usuario</h2>
-
-
 
 <form (ngSubmit)="saveChanges()" #userForm="ngForm" class="user-form">
   <div>
@@ -27,6 +24,19 @@
   <div>
     <label>Dirección:</label>
     <input type="text" name="userAddress" [(ngModel)]="user.userAddress" required>
+  </div>
+  <div>
+    <label>Carrera:</label>
+    <select name="userCarrera" [(ngModel)]="user.userCarrera" (change)="onCarreraSelect($event)" required>
+      <option *ngFor="let carrera of carreras" [value]="carrera.id">{{ carrera.nombre }}</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Curso:</label>
+    <select name="userCurso" [(ngModel)]="user.userCurso" required>
+      <option *ngFor="let curso of cursos" [value]="curso.nombre">{{ curso.nombre }}</option>
+    </select>
   </div>
   <button type="submit">Guardar cambios</button>
 </form>
