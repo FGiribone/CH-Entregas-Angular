@@ -193,22 +193,6 @@
       "createdAt": "2024-05-11T17:20:37.167Z",
       "role": "USER",
       "actions": []
-    },
-    {
-      "id": "623f",
-      "userCarrera": "1",
-      "userCurso": "Programación I",
-      "userName": "fabricio",
-      "userLastName": "giribone",
-      "userEmail": "a@a.com",
-      "userAddress": "prueba edit",
-      "userProvince": "Buenos Aires",
-      "userCity": "CAPITAL FEDERAL",
-      "userPassword": "123456",
-      "password2": "123456",
-      "createdAt": "2024-05-13T20:10:56.578Z",
-      "role": "USER",
-      "actions": []
     }
   ]
 }

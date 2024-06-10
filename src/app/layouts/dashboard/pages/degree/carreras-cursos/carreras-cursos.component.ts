@@ -17,7 +17,7 @@ import { EditarCarreraCursoComponent } from './editar-carrera-cursos/editar-carr
 })
 export class CarrerasCursosComponent implements OnInit {
   carreras: Carrera[] = [];
-  cursos: { [key: number]: Curso[] } = {}; // cursos por carrera
+  cursos: { [key: number]: Curso[] } = {}; 
   usuarios: Iusuario[] = [];
   currentUser$: Observable<Iusuario | null>;
 
